@@ -77,6 +77,8 @@ index = 0
 
 try:
     for event in i.event_gen():
+        print('key')
+        print(sum(pygame.key.get_pressed()))
         if event is not None:
             (header, type_names, watch_path, filename) = event
             if header.mask & inotify.constants.IN_CREATE:
